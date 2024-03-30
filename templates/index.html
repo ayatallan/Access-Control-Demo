@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+            transition: transform 0.3s ease;
+        }
+
+      
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .instructions {
+            color: #fff;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 2px #764ba2;
+        }
+        @media screen and (max-width: 800px) {
+            .container {
+                padding: 30px;
+            }
+
+            .btn {
+                padding: 15px 30px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Access Control Dashboard </h1>
+        <p class="instructions">Select an access control model below to proceed:</p>
+
+        <div class="btn-container">
+            <a href="/abac" class="btn">ABAC</a>
+            <a href="/rbac" class="btn">RBAC</a>
+            <a href="/dac" class="btn">DAC</a>
+            <a href="/mac" class="btn">MAC</a>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock %}

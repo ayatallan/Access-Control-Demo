@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .menu {
+            background-color: #e8ecf0;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bolder;
+            margin-bottom: 10rem;
+            box-shadow: 1px 1px 9px 0px #8989b0;
+
+        }
+
+        .logo {
+            font-size: 20px;
+            margin-right: 20px;
+            color: #0056b3;
+            text-shadow: 1px 1px 1px #764ba2;
+
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0 10px;
+        }
+
+        .menu-link {
+            /* color: #466bdb; */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #0056b3;
+
+        }
+
+        .menu-link:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="logo">
+            🔐  Control Access System
+        </div>
+        <ul>
+            <li><a href="/" class="menu-link">Home</a></li>
+            <!-- <li><a href="/abac" class="menu-link">ABAC</a></li>
+            <li><a href="/rbac" class="menu-link">RBAC</a></li>
+            <li><a href="/dac" class="menu-link">DAC</a></li>
+            <li><a href="/mac" class="menu-link">MAC</a></li> -->
+        </ul>
+    </div>
+    {% block content %}
+    <div class="container">
+
+    </div>
+    {% endblock %}
+</body>
+
+</html>
